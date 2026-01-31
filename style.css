@@ -848,3 +848,52 @@ section#about {
   .contact-link:hover {
     text-decoration: underline;
   }
+
+/* --- NEW HERO STYLING --- */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: radial-gradient(circle at center, #0a1118 0%, #000 100%);
+}
+
+/* The Glowing Title from the Image */
+.hero-title-hologram {
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(to bottom, #fff 20%, #03e3fc 50%, #03fca5 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 25px rgba(3, 227, 252, 0.4));
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+/* The Background Circuitry Pattern */
+.circuit-bg {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 1px 1px, rgba(3, 227, 252, 0.15) 1px, transparent 0);
+  background-size: 30px 30px;
+  mask-image: radial-gradient(ellipse at center, black, transparent 80%);
+  pointer-events: none;
+}
+
+/* Irregular Shards for the Icons */
+.glass-shard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: polygon(15% 0%, 100% 15%, 85% 100%, 0% 85%);
+  z-index: 5;
+}
+
+/* Neutral Plexus Canvas position */
+#neural-plexus {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.6;
+}
